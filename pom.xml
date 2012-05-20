@@ -23,10 +23,11 @@
     <version>1.0.0-SNAPSHOT</version>
     <name>OSGi Utilities</name>
     <packaging>bundle</packaging>
-    <description>Camel OSGi Service Component</description>
+    <description>OSGi Utilities</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.namespace>com.github.szhem.osgi.util</project.namespace>
 
         <junit.version>4.10</junit.version>
         <mockito.version>1.9.0</mockito.version>
@@ -43,12 +44,12 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Export-Package>com.github.szhem.osgi.util*;version="${project.version}"</Export-Package>
+                        <Export-Package>${project.namespace}*;version="${project.version}"</Export-Package>
                         <Import-Package>
                             *
                         </Import-Package>
-                        <Bundle-Name>${project.artifactId}</Bundle-Name>
-                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Name>${project.description}</Bundle-Name>
+                        <Bundle-SymbolicName>${project.namespace}</Bundle-SymbolicName>
                     </instructions>
                 </configuration>
             </plugin>
