@@ -47,7 +47,7 @@ To start traking for OSGi services you have to do the following steps:
     // 3. optionally specify the ClassLoader to fallback to load exported OSGi service interfaces
     ClassLoader fallbackClassLoader = getClass().getClassLoader();
 
-    // 4. initializy proxy creator to proxy exported OSGi services as the may come and go
+    // 4. initialize proxy creator to proxy obtained OSGi services as the may come and go
     OsgiProxyCreator proxyCreator = new OsgiDefaultProxyCreator();
 
     // 5. create OsgiServiceList or OsgiServiceCollection
@@ -56,12 +56,12 @@ To start traking for OSGi services you have to do the following steps:
     // 6. start tracking for services
     services.startTracking();
 
-    // 7. now services list is updated dynamically even during iterating through it, as services will come and go, so
+    // 7. now list with services is updated dynamically even during iterating through it, as services will come and go
     for (Service service : services) {
         service.doSomething();
     }
 
-    // 8. finally you have to release all resources obtained and unregistering all the listener from the OSGi framework
+    // 8. finally you have to release all resources obtained and unregister all the listeners from the OSGi framework
     services.stopTracking();
 
 ### License
