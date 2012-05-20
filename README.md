@@ -9,10 +9,22 @@ This project contains rather useful OSGi utilities to deal with OSGi services.
 
 Currently there are the following features:
 
+* [ClassLoader that delegates class and resource loading to the specified bundle](#bundle-delegating-classloader)
 * [DSL for OSGi filters](#osgi-services-filter-dsl)
 * [Collections API to track for OSGi services](#collections-api-to-track-for-osgi-services)
 
 ### How to use?
+
+#### BundleDelegatingClassLoader
+
+If you need to delegate class or resource loading to the specified bundle you can use the provided `BundleDelegatingClassLoader`
+which can fallback to the specified `ClassLoader` if the provided bundle fails to load required class or resource.
+
+Here is an example:
+
+    BundleDelegatingClassLoader classLoader = new BundleDelegatingClassLoader(bundle, getClass().getClassLoader());
+    Class<?> clazz = classLoader.loadClass("foo.bar.Class");
+
 
 #### OSGi Services Filter DSL
 
