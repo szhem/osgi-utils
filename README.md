@@ -15,7 +15,7 @@ Currently there are the following features:
 
 ### How to use?
 
-#### BundleDelegatingClassLoader
+#### Bundle Delegating ClassLoader
 
 If you need to delegate class or resource loading to the specified bundle you can use the provided `BundleDelegatingClassLoader`
 which can fallback to the specified `ClassLoader` if the provided bundle fails to load required class or resource.
