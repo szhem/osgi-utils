@@ -7,7 +7,7 @@
 ### What is it?
 This project contains rather useful OSGi utilities to deal with OSGi services.
 
-Currently there are following features:
+Currently there are the following features:
 
 * [DSL for OSGi filters](#osgi-services-filter-dsl)
 * [Collections API to track for OSGi services](#collections-api-to-track-for-osgi-services)
