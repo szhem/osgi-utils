@@ -57,7 +57,7 @@ public class OsgiServiceCollection<E> implements Collection<E> {
      * @param bundleContext the {@link BundleContext} instance to look for the services that match the specified filter
      * @param filter OSGi instance to lookup OSGi services
      * @param fallbackClassLoader {@code ClassLoader} to load classes and resources in the case when these classes and
-*    * resources cannot be loaded by means of bundle associated with the given bundleContext
+     * resources cannot be loaded by means of bundle associated with the given bundleContext
      * @param proxyCreator an instance of {@link OsgiProxyCreator} to wrap services registered in the OSGi registry
      */
     public OsgiServiceCollection(BundleContext bundleContext, String filter, ClassLoader fallbackClassLoader,
